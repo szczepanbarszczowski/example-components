@@ -1,0 +1,23 @@
+@import 'appBase';
+
+.arrowBackButton {
+  @include flex(row);
+  @include p(0);
+  @include pb(0.5);
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: $color-gray-medium3;
+  cursor: pointer;
+
+  .icon {
+    fill: $color-gray-medium3;
+    width: 20px;
+  }
+
+  .label {
+    @include pl(0.5);
+    font-size: 12px;
+    line-height: 24px;
+  }
+}

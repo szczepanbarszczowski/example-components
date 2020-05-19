@@ -1,0 +1,24 @@
+@import 'appBase';
+
+@import '../../../shared';
+
+.shipmentOptions {
+  @include media-breakpoint-variant(down sm) {
+    display: none;
+  }
+}
+
+.options {
+  margin-top: 75px;
+  @include media-breakpoint-variant(down sm) {
+    margin-top: 30px;
+  }
+  @include flex(row, false, flex-end);
+}
+
+.button {
+  width: 170px;
+  @include media-breakpoint-variant(down sm) {
+    width: 100%;
+  }
+}

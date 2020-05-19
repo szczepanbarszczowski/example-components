@@ -1,0 +1,6 @@
+@import 'appBase';
+
+.shipment {
+  @include flex($direction: column);
+  width: 100%;
+}

@@ -1,0 +1,16 @@
+@import 'appBase';
+
+.wrapper {
+  @include p(1);
+  background-color: $color-greyish7;
+  flex: 1;
+}
+
+.content {
+  @include media-breakpoint-variant(up md) {
+    @include flex(row, flex-start, flex-start);
+    @include center;
+    width: 1100px;
+    max-width: 100%;
+  }
+}

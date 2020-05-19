@@ -1,0 +1,17 @@
+@import 'appBase';
+
+.addEntry {
+  @include flex(row, center);
+  @include box-variant-checkout;
+  flex-wrap: nowrap;
+
+  cursor: pointer;
+  justify-content: center;
+  font-size: 13px;
+  min-height: 150px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}

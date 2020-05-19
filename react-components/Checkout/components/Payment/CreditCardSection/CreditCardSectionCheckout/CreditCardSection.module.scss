@@ -1,0 +1,10 @@
+@import 'appBase';
+
+.createCreditCardFrom {
+  height: 209px;
+  width: 100%;
+
+  @include media-breakpoint-variant(down sm) {
+    height: 269px;
+  }
+}

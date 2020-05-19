@@ -1,0 +1,22 @@
+@import 'appBase';
+
+.addressEntryWrapper {
+  @include flex(row, center);
+  @include box-variant-checkout;
+  cursor: pointer;
+  flex-wrap: nowrap;
+
+  @include media-breakpoint-variant(down sm) {
+    box-shadow: none;
+  }
+}
+
+.checked {
+  @include active-button-border;
+}
+
+.controls {
+  display: flex;
+  flex-grow: 1;
+  align-self: flex-start;
+}

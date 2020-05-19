@@ -1,0 +1,116 @@
+@import '~styles/base';
+
+.wrapper {
+  @include size(100%);
+  overflow: hidden;
+}
+
+.headingSection {
+  @include size(100%, 400px);
+  padding-top: 90px;
+
+  @include media-breakpoint-down(sm) {
+    height: 218px;
+    padding-top: 40px;
+    padding-bottom: 102px;
+  }
+}
+
+.innerWrapper {
+  @include media-breakpoint-up(sm) {
+    @include container;
+  }
+  @include media-breakpoint-down(sm) {
+    @include container($gutter: false);
+    @include px(1);
+  }
+}
+
+.heading {
+  @include font(h2-light, $color-gray-dark);
+  line-height: 58px;
+
+  @include media-breakpoint-down(sm) {
+    @include font(h3-light, $color-gray-dark, $font-family: $font-family-light);
+    line-height: 34px;
+  }
+}
+
+.bold {
+  @include font(h1-bold, $color-black);
+  font-weight: 600;
+  line-height: 58px;
+
+  @include media-breakpoint-down(sm) {
+    @include font(h3-light, $color-gray-dark, $font-family: $font-family-semibold);
+    line-height: 34px;
+  }
+}
+
+.secondSection {
+  @include flex(column, center, center);
+  padding-top: 80px;
+  padding-bottom: 76px;
+  max-width: 530px;
+  margin: auto;
+
+  @include media-breakpoint-down(sm) {
+    @include p(0);
+
+    .paragraph {
+      @include pb(0);
+    }
+  }
+}
+
+.getInTouchBtn {
+  @include my(1);
+  align-self: flex-end;
+
+  @include media-breakpoint-down(sm) {
+    align-self: flex-start;
+  }
+}
+
+.clutchBg {
+  @include absolute(bottom 0 left 0 right 0);
+
+  height: 769px;
+  width: 100%;
+}
+
+.carousel {
+  @include relative;
+  @include container($fluid: true);
+  height: 480px;
+  width: 100%;
+
+  @include media-breakpoint-down(sm) {
+    height: 160px;
+  }
+}
+
+.paragraph {
+  @include media-breakpoint-up(sm) {
+    @include font(paragraph-light, $color-gray-dark, $align: center, $font-family: $font-family-light);
+    line-height: 34px;
+    padding-top: 42px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    @include font(h6-light, $color-gray-dark, $align: center);
+
+    font-weight: 300;
+    padding-top: 22px;
+    padding-bottom: 67px;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .paragraphBold {
+    @include font(h5, $color-black, $align: center, $font-family: $font-family-semibold);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+}

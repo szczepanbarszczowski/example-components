@@ -1,0 +1,21 @@
+@import 'appBase';
+
+.changeButton {
+  @include font(base, $font-weight: 700);
+  @include pl(0.5);
+  cursor: pointer;
+  text-decoration: underline !important;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.isDisabled {
+  @include font(base, $font-weight: 700, $color: $color-greyish !important);
+
+  cursor: not-allowed;
+}
+
+.icon {
+  width: 24px;
+  fill: $color-gray-dark;
+}

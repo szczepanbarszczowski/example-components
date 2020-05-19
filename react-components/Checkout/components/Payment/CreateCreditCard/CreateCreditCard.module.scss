@@ -1,0 +1,8 @@
+@import 'appBase';
+@import '../../../shared';
+
+.hideForm {
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+}

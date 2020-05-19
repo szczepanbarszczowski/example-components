@@ -1,0 +1,14 @@
+@import 'appBase';
+
+.placeOrderAndPayButton {
+  @include my(2);
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.isHidden {
+  @include media-breakpoint-down(xs) {
+    display: none;
+  }
+}

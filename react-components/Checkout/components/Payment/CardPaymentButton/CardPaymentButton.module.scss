@@ -1,0 +1,27 @@
+@import 'appBase';
+
+.icon {
+  @include size(24px, 20px);
+  @include my(0);
+  @include absolute(right 15px);
+  transition: 0.3s;
+  fill: $color-green2;
+  @include media-breakpoint-variant(down sm) {
+    position: static;
+  }
+}
+
+.iconActive {
+  fill: $color-primary-brand;
+}
+
+.mada {
+  @include size(48px, 40px);
+  position: static;
+}
+
+.threeIcons {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}

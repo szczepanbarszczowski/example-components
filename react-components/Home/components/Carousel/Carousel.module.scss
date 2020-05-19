@@ -1,0 +1,19 @@
+@import '~styles/base';
+
+.slider {
+  @include container;
+  max-height: 480px;
+
+  width: 100%;
+}
+
+.image {
+  width: 100%;
+  user-select: none;
+
+  -webkit-user-drag: none;
+  -moz-user-drag: none;
+  /* stylelint-disable property-no-vendor-prefix */
+  -moz-user-select: none;
+  /* stylelint-enable property-no-vendor-prefix */
+}

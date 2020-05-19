@@ -1,0 +1,53 @@
+@import 'appBase';
+
+.section {
+  flex: 1;
+}
+
+.content {
+  @include flex(row);
+
+  > :first-child {
+    flex: 1;
+    @include mr(2);
+  }
+
+  @include media-breakpoint-down(sm) {
+    @include flex(column);
+
+    > :first-child {
+      margin-right: unset;
+    }
+  }
+}
+
+.sectionHeading,
+%section-heading {
+  @include pt(1);
+  @include pb(2);
+  font-size: 19px;
+  font-weight: 700;
+  text-transform: capitalize;
+  width: 100%;
+  display: block;
+  color: $color-black;
+
+  @include media-breakpoint-down(sm) {
+    @include pb(1.5);
+  }
+}
+
+.sectionSubHeading {
+  @extend %section-heading;
+
+  @include pb(0.75);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+:global {
+  .paypal-checkout-sandbox-iframe,
+  .paypal-checkout-iframe {
+    height: 100vh !important;
+  }
+}

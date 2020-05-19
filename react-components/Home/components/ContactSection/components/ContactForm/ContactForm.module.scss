@@ -1,0 +1,14 @@
+@import '~styles/base';
+
+.btn {
+  @include mt(1);
+  @include media-breakpoint-up(sm) {
+    align-self: flex-end;
+  }
+
+  @include media-breakpoint-down(xs) {
+    align-self: flex-end;
+  }
+
+  letter-spacing: 0;
+}

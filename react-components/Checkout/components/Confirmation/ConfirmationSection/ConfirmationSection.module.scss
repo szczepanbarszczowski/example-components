@@ -1,0 +1,42 @@
+@import 'appBase';
+
+.wrapper {
+  @include container;
+  @include p(3, 1);
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  flex: 1;
+
+  @include media-breakpoint-down(xs) {
+    @include p(0);
+  }
+}
+
+.content {
+  @include col(10, $align: center);
+  @include center;
+  @include flex(column, $justify: center);
+  @include p(4);
+  @include media-breakpoint-down(xs) {
+    @include p(2);
+    min-height: 80vh;
+    width: 100%;
+  }
+
+  text-align: center;
+  min-height: 70vh;
+}
+
+.theme-elabelz {
+  font-size: 14px;
+  color: $color-gray-dark2;
+
+  .content {
+    @include pt(0);
+    @include media-breakpoint-down(xs) {
+      border: unset;
+      box-shadow: unset;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import 'appBase';
+
+.link {
+  @include font(base, $font-weight: 700);
+  @include pl(0.5);
+  cursor: pointer;
+  text-decoration: underline;
+  flex-shrink: 0;
+}
+
+.icon {
+  width: 24px;
+  fill: $color-gray-dark;
+}

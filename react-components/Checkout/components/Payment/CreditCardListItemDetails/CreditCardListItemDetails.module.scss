@@ -1,0 +1,17 @@
+@import 'appBase';
+
+.details {
+  @include flex(row, center, space-between);
+  font-size: 13px;
+  line-height: 16px;
+  color: $color-black;
+  flex: 1;
+
+  @include media-breakpoint-variant(down xs) {
+    @include flex(column, flex-start);
+  }
+}
+
+.boldText {
+  font-weight: 600;
+}

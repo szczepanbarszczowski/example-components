@@ -1,0 +1,9 @@
+@import 'appBase';
+
+.check {
+  @include mr(1);
+
+  @include media-breakpoint-up(sm) {
+    margin-right: 22px;
+  }
+}

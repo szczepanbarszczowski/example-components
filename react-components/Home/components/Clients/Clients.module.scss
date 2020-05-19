@@ -1,0 +1,70 @@
+@import '~styles/base';
+
+.clients {
+  @include py(5);
+  @include flex(row, center, center);
+  width: 100%;
+
+  @include media-breakpoint-down(sm) {
+    @include flex(column, flex-start);
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+}
+
+.title {
+  @include font(light-text, $color-gray-dark);
+}
+
+.iconsWrap {
+  @include pl(4);
+  @include flex(row, center, space-between);
+  width: 700px;
+
+  @include media-breakpoint-down(sm) {
+    @include p(0);
+    @include pt(1);
+    width: 100%;
+  }
+}
+
+.flymble {
+  margin-top: 5px;
+  max-height: 43px;
+  max-width: 100px;
+
+  @include media-breakpoint-down(sm) {
+    max-height: 22px;
+    max-width: 68px;
+  }
+}
+
+.dior {
+  max-height: 33px;
+  max-width: 100px;
+
+  @include media-breakpoint-down(sm) {
+    max-height: 22px;
+    max-width: 60px;
+  }
+}
+
+.alcatel {
+  max-height: 38px;
+  max-width: 100px;
+
+  @include media-breakpoint-down(sm) {
+    max-height: 22px;
+    max-width: 52px;
+  }
+}
+
+.event {
+  max-height: 40px;
+  max-width: 105px;
+
+  @include media-breakpoint-down(sm) {
+    max-height: 22px;
+    max-width: 62px;
+  }
+}

@@ -1,0 +1,47 @@
+@import '~styles/base';
+
+.wrapper {
+  padding-top: 113px;
+  padding-bottom: 200px;
+  margin: 0 auto;
+
+  @include media-breakpoint-down(md) {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
+}
+
+.title {
+  @include font(h1, $color-black, $font-family: $font-family-medium);
+  @include mb(3);
+  text-align: center;
+
+  @include media-breakpoint-down(sm) {
+    @include font(h4, $color-black, $font-family: $font-family-medium);
+  }
+
+  .featured {
+    color: $brand-primary;
+  }
+}
+
+.formWrap {
+  @include container($gutter: false);
+  justify-content: center;
+}
+
+.form {
+  @include flex(column, center, flex-end);
+
+  @include media-breakpoint-up(sm) {
+    width: 410px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
+}

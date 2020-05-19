@@ -1,0 +1,94 @@
+@import 'appBase';
+
+.buttonWrapper {
+  @include flex(row, center, flex-start);
+  @include relative;
+  @include button-size(50px, 6px);
+  text-align: center;
+  width: 200px;
+  padding: 0 10px;
+  cursor: pointer;
+  user-select: none;
+  @include media-breakpoint-variant(down sm) {
+    @include button-size(70px, 6px);
+  }
+
+  /* stylelint-disable */
+  @media only screen and (max-width: 449px) {
+    /* stylelint-enable */
+    min-width: 200px;
+    flex: 1;
+  }
+
+  &.base {
+    @include button-variant-checkout($color-black, $color-white, $color-white);
+    border: 1px solid $color-elabelz-grey;
+    box-shadow: 0 2px 2px rgba(172, 180, 191, 0.15);
+  }
+
+  &.active {
+    @include button-variant-checkout(
+      $color-black,
+      $color-peach,
+      $color-primary-brand
+    );
+    border: 2px solid $color-primary-brand;
+    box-shadow: none;
+  }
+
+  &:disabled {
+    @include button-variant-checkout(
+      $color-black,
+      $color-peach,
+      $color-primary-brand
+    );
+    border: 2px solid $color-primary-brand;
+    box-shadow: none;
+  }
+
+  &.disabled {
+    @include button-variant-checkout($color-black, $color-white, $color-white);
+    border: 1px solid $color-elabelz-grey;
+    box-shadow: 0 2px 2px rgba(172, 180, 191, 0.15);
+    opacity: 0.5;
+    cursor: default;
+  }
+}
+
+.buttonElement {
+  @include flex(row, center, center);
+  flex: 1;
+}
+
+.buttonText {
+  font-size: 13px;
+  line-height: 16px;
+  flex: 2;
+
+  @include media-breakpoint-variant(down sm) {
+    font-size: 11px;
+  }
+}
+
+.isLoading,
+.isSuccess {
+  cursor: not-allowed;
+}
+
+.loader,
+.checkIcon {
+  @include absolute(top 50% left 20px);
+  transform: translateY(-50%);
+  fill: currentColor;
+}
+
+:global {
+  a {
+    button {
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+}

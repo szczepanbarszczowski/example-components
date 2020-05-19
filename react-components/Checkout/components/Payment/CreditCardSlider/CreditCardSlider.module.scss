@@ -1,0 +1,10 @@
+@import 'appBase';
+
+.wrapper {
+  @include mb(0.75);
+  width: 100%;
+}
+
+.cardWrapper {
+  @include pr(1);
+}

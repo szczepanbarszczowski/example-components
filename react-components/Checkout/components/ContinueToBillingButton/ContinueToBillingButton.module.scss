@@ -1,0 +1,13 @@
+@import 'appBase';
+
+.continue {
+  @include py(1.5);
+  width: 100%;
+  @include media-breakpoint-up(sm) {
+    display: none;
+  }
+}
+
+.buttonText {
+  text-transform: uppercase;
+}

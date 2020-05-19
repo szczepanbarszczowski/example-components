@@ -1,0 +1,10 @@
+@import 'appBase';
+
+.check {
+  @include mr(1);
+  flex-shrink: 0;
+
+  @include media-breakpoint-up(sm) {
+    display: none;
+  }
+}

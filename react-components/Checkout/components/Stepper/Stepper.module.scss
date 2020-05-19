@@ -1,0 +1,20 @@
+@import 'appBase';
+
+.stepper {
+  @include p(1);
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid $color-elabelz-grey;
+  box-shadow: 0 2px 2px rgba(172, 180, 191, 0.15);
+}
+
+.contentWrapper {
+  @include flex(row, center, space-evenly);
+  max-width: $checkout-page-width;
+  overflow: hidden;
+  flex: 1;
+
+  @include media-breakpoint-variant(down xs) {
+    justify-content: flex-start;
+  }
+}

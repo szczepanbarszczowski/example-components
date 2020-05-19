@@ -1,0 +1,43 @@
+@import 'appBase';
+
+.wrapper {
+  @include flex(row, center);
+  @include mb(1.5);
+  @include p(1);
+  cursor: pointer;
+
+  width: 100%;
+  border: 1px solid $color-elabelz-grey;
+  border-radius: 6px;
+  background-color: $color-white;
+  box-shadow: 0 2px 2px rgba(172, 180, 191, 0.15);
+
+  @include media-breakpoint-variant(down xs) {
+    @include p(1.5);
+    
+    > svg {
+      display: none;
+    }
+  }
+}
+
+.checked {
+  @include active-button-border;
+  @include mb(0.5);
+}
+
+.details {
+  @include flex(row, center, space-between);
+  font-size: 13px;
+  line-height: 16px;
+  color: $color-black;
+  flex: 1;
+
+  @include media-breakpoint-variant(down xs) {
+    @include flex(column, flex-start);
+  }
+}
+
+.boldText {
+  font-weight: 600;
+}

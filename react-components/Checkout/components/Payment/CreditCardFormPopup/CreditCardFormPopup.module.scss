@@ -1,0 +1,31 @@
+@import 'appBase';
+
+.formWrapper {
+  @include mt(2);
+  @include p(2);
+  @include size(505px, auto);
+
+  margin: 0 auto;
+  background-color: $color-white;
+  flex: 1;
+
+  @include media-breakpoint-variant(down sm) {
+    max-width: 100%;
+  }
+}
+
+.close {
+  @include size(25px);
+  fill: $color-black;
+  cursor: pointer;
+}
+
+.headingWrapper {
+  @include flex(row, center, space-between);
+  @include mb(1);
+}
+
+.modalTitle {
+  font-size: 18px;
+  font-weight: 700;
+}

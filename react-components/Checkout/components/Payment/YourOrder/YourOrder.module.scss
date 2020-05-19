@@ -1,0 +1,7 @@
+@import 'appBase';
+
+.wrapper {
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}

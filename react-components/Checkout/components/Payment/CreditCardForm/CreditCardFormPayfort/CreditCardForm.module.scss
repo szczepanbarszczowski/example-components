@@ -1,0 +1,22 @@
+@import 'appBase';
+
+.error {
+  @include pb(1);
+}
+
+.iframe {
+  border: 0;
+  outline: none;
+  height: 485px !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.loaderContainer {
+  @include py(2);
+  max-width: 300px;
+  margin: 0 auto;
+  background: $color-white;
+}

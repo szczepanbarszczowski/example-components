@@ -1,0 +1,8 @@
+@import 'appBase';
+
+.paragraph {
+  @include my(0.5);
+  line-height: 21px;
+  font-size: 14px;
+  color: $color-gray-dark2;
+}

@@ -1,0 +1,23 @@
+@import 'appBase';
+
+.block {
+  @include flex(row, flex-start, flex-start);
+  @include px(2);
+  @include py(0.5, 0.75);
+  font-size: 20px;
+  background-color: $color-gray;
+
+  @include media-breakpoint-down(sm) {
+    @include px(1.5);
+  }
+}
+
+.title,
+.amount {
+  @include m(0);
+}
+
+.title {
+  flex: 1 1 auto;
+  font-weight: 300;
+}

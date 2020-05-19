@@ -1,0 +1,7 @@
+@import 'appBase';
+
+.paragraph {
+  @include my(1, 0.5);
+  @include mb(3);
+  font-size: 16px;
+}

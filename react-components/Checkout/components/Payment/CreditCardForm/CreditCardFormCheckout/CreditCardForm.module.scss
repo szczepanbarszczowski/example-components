@@ -1,0 +1,40 @@
+@import 'appBase';
+
+.wrapper {
+  @include flex(column);
+  @include dashboard-form-defaults;
+  width: auto;
+  max-width: 100%;
+}
+
+.switchElement {
+  @include mx(0.5, 2);
+}
+
+.buttons {
+  @include flex(row);
+  @include media-breakpoint-down(xs) {
+    @include flex(column);
+    flex: 1;
+  }
+
+  > button:first-child {
+    @include mr(0.75);
+  }
+
+  @include media-breakpoint-down(xs) {
+    > button:first-child {
+      @include mb(0.75);
+    }
+  }
+}
+
+.error {
+  @include pb(1);
+}
+
+// Use it to style the container of CheckoutJS iframe
+.frames-container {
+  @include mb(0.75);
+  max-height: 110px;
+}

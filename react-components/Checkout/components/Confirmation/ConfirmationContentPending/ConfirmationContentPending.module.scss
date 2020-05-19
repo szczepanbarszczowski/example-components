@@ -1,0 +1,81 @@
+@import 'appBase';
+
+.title {
+  color: $color-black;
+  font-size: 20px;
+  font-weight: bold;
+  word-break: break-word;
+}
+
+.toAccount {
+  @include center;
+  @include mb(1);
+  color: $color-black !important;
+  max-width: 400px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.contentWrapper {
+  max-width: 575px;
+  margin: 0 auto;
+}
+
+.toShop {
+  @include center;
+  @include mb(1);
+  max-width: 400px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.orderNumber {
+  @include pt(1);
+  @include pb(1);
+}
+
+.info {
+  @include pb(1);
+  line-height: 21px;
+}
+
+.infoItem {
+  @include px(2);
+  @include media-breakpoint-down(xs) {
+    display: inline;
+  }
+}
+
+.orderNumberButton {
+  @include media-breakpoint-down(xs) {
+    flex-grow: 0.2;
+  }
+}
+
+.label {
+  @include my(0.75);
+  color: $color-black;
+  background-color: $color-gray2;
+  display: inline-block;
+  padding: 18px 32px;
+  font-weight: bold;
+  font-size: 20px;
+  min-width: 370px;
+
+  @include media-breakpoint-down(xs) {
+    min-width: unset;
+  }
+}
+
+.image {
+  max-width: 278px;
+  margin: 0 auto;
+
+  @include media-breakpoint-down(xs) {
+    max-width: 100%;
+  }
+}
+
+.goTo {
+  @include mb(1);
+}

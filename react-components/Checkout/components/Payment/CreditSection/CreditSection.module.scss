@@ -1,0 +1,15 @@
+@import 'appBase';
+@import '../../../shared';
+
+.wrapper {
+  @include flex(row, center);
+  width: 100%;
+  font-size: 13px;
+}
+
+.icon {
+  @include size(24px);
+  @include mr(0.75);
+  fill: $color-primary-brand;
+  flex-shrink: 0;
+}

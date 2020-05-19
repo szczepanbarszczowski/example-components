@@ -1,0 +1,6 @@
+@import 'appBase';
+
+.wrapper {
+  @include mb(0.75);
+  width: 100%;
+}

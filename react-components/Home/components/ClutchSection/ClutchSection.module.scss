@@ -1,0 +1,87 @@
+@import '~styles/base';
+
+.wrapper {
+  @include container(true, $gutter: false);
+  @include gradient-y($color-white, $color-gray-light);
+  background: $light-gray-gradient;
+}
+
+.content {
+  @include container($gutter: false);
+  @include relative;
+
+  padding-top: 114px;
+  height: 769px;
+
+  @include media-breakpoint-down(md) {
+    padding-top: 60px;
+    height: 630px;
+  }
+}
+
+.title {
+  @include font(h1, $color-black, $font-family: $font-family-medium);
+  @include center;
+  text-align: center;
+
+  @include media-breakpoint-down(sm) {
+    @include font(h4, $color-black, $font-family: $font-family-medium);
+    line-height: 26px;
+  }
+}
+
+.cardsWrapper {
+  @include inline-flex(row, flex-start, space-between);
+
+  padding-bottom: 40px;
+  padding-top: 143px;
+
+  @include media-breakpoint-down(md) {
+    padding-top: 90px;
+  }
+}
+
+.card {
+  @include mx(1);
+  width: 100%;
+  background-color: $color-white;
+  border-radius: 3px;
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.1);
+  padding: 40px;
+
+  @include media-breakpoint-down(md) {
+    @include mx(1);
+    @include mb(2);
+    min-width: 360px;
+    display: inline-block;
+  }
+}
+
+.clutchRating {
+  @include absolute(bottom 0 left 0 right 0);
+}
+
+.name {
+  @include font(sm, $color-gray-dark, $font-family: $font-family-medium);
+}
+
+.position {
+  @include font(sm, $color-gray-dark);
+  padding-bottom: 37px;
+}
+
+.text {
+  @include font(sm, $color-gray-dark);
+  font-size: 16px;
+  line-height: 26px;
+}
+
+@include media-breakpoint-down(md) {
+  .cards {
+    overflow-y: scroll;
+  }
+}
+
+.link {
+  color: $color-blue;
+}

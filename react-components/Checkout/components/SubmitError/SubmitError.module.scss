@@ -1,0 +1,7 @@
+@import 'appBase';
+
+.error {
+  @include pt(1);
+  @include center;
+  color: $color-error;
+}
